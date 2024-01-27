@@ -49,7 +49,7 @@ $img_path = $protocol.$_SERVER["HTTP_HOST"]."/img/logo.png";
                     <!-- BODY -->
                     <tr>
                         <td>
-                           <table border="1" bgcolor="#fefefe" width="100%" style="padding:24px;border-color:#1e1e1e;" cellspacing="0" cellpadding="0">
+                           <table border="1" bgcolor="#fefefe" width="100%" style="padding:24px;border:solid 1px #1e1e1e;" cellspacing="0" cellpadding="0">
                             <tr>
                                 <td style="border: none;">
                                     <div class="content-div">
