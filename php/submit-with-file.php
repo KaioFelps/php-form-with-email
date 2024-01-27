@@ -57,6 +57,7 @@ $phpMailer = new PHPMailer();
 $phpMailer->setFrom(ini_get("sendmail_from"));
 $phpMailer->Subject= $subject;
 $phpMailer->Body = $body;
+$phpMailer->isHTML(true);
 $phpMailer->addAddress($recipient_email);
 $phpMailer->addAttachment($cv_to_attach_path, $cv_to_attach_name);
 
@@ -72,11 +73,10 @@ if(!$email_sent) {
         "./console.txt",
         PHP_EOL."$phpMailer->ErrorInfo".PHP_EOL,
         FILE_APPEND
-
     );
 } else {
     header('Content-Type: application/json');
-    http_response_code(204);
+    http_response_code(200);
     
     echo json_encode("Email successfully sent.");
 }
