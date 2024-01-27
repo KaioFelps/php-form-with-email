@@ -1,3 +1,8 @@
+<?php
+$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://" : "http://";
+$img_path = $protocol.$_SERVER["HTTP_HOST"]."/img/logo.png";
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,7 +40,7 @@
                     <tr>
                         <td bgcolor="#1e1e1e" align="center" style="padding: 40px;">
                             <table border="0" width="100%" cellspacing="0" cellpadding="0">
-                                <tr><td align="center"><img src="./img/logo.png" alt="Trust Corp Logo"></td></tr>
+                                <tr><td align="center"><img src="<?php echo $img_path; ?>" alt="Trust Corp Logo"></td></tr>
                                 <tr><td style="padding:24px 0;"><hr style="border:none;background-color:#cccccc;height:1px;"></td></tr>
                                 <tr><td align="center" style="color: white; font-size: 1.5rem;">New career proposal email from <?php echo $name; ?></td></tr>
                             </table>
